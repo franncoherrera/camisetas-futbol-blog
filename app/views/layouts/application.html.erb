@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% if request.path != "/users/sign_in" && request.path != "/users/sign_up"%>
+        <%= render 'partials/nav' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

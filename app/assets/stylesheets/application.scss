@@ -18,3 +18,61 @@ body{
     font-family: "Poppins", Helvetica, sans-serif;
     background-color: var(--color-background);
 }
+
+////***** NAVBAR *****////
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-primario) !important;
+    color: var(--color-secundario) !important;
+    z-index: 50;
+    top: 0;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-nav .nav-item form button {
+    background-color: var(--color-primario) !important;
+    color: white;
+    border: none;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link>button {
+    border: none;
+    background-color: var(--color-primario) !important;
+    color: white;
+}
+
+.navbar-toggler {
+    background-color: #eee;
+}
+
+#navbarNav {
+    align-items: center;
+    justify-content: end;
+}
+
+
+.titulo-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo-nav {
+    color: white;
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+////***** FIN NAVBAR *****////
+
