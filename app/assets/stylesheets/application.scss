@@ -1,1 +1,21 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap');
+
+:root {
+    --color-primario: #0f314f;
+    --color-secundario: #9fabc8;
+    --color-background: ligth-blue;
+}
+
+html {
+    font-size: 10px;
+}
+
+/** Pagina de inicio **/
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", Helvetica, sans-serif;
+    background-color: var(--color-background);
+}
