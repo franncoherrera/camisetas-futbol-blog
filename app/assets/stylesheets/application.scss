@@ -5,6 +5,8 @@
     --color-primario: #0f314f;
     --color-secundario: #9fabc8;
     --color-background: rgb(215, 215, 143);
+    --color-iconos-neutrales: #eee;
+    --color-neutro: white;
 }
 
 html {
@@ -31,27 +33,27 @@ body{
 }
 
 .navbar-brand {
-    color: white;
+    color: var(--color-neutro);
 }
 
 .navbar-nav .nav-item form button {
     background-color: var(--color-primario) !important;
-    color: white;
+    color: var(--color-neutro);
     border: none;
 }
 
 .nav-link {
-    color: white !important;
+    color: var(--color-neutro) !important;
 }
 
 .nav-link>button {
     border: none;
     background-color: var(--color-primario) !important;
-    color: white;
+    color: var(--color-neutro);
 }
 
 .navbar-toggler {
-    background-color: #eee;
+    background-color: var(--color-iconos-neutrales);
 }
 
 #navbarNav {
@@ -68,7 +70,7 @@ body{
 }
 
 .titulo-nav {
-    color: white;
+    color: var(--color-neutro);
     font-size: 1.6rem;
     margin: 0;
     font-weight: bold;
