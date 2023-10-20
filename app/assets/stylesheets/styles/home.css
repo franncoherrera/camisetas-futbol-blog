@@ -1,5 +1,3 @@
-@import './application.scss';
-
 
 .container__home{
     min-height: 100vh;
@@ -10,7 +8,7 @@
 
 .container__title{
     text-align: center;
-    font-size: 18rem;
+    font-size: 15rem;
     font-weight: 700;
     color: var(--color-primario);
 }
