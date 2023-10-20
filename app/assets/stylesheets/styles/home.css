@@ -1,0 +1,34 @@
+@import './application.scss';
+
+
+.container__home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__title{
+    text-align: center;
+    font-size: 18rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+@media  (max-width: 1380px){
+    .container__title{
+        font-size: 13rem;
+    }
+}
+
+@media  (max-width: 970px){
+    .container__title{
+        font-size: 8rem;
+    }
+}
+
+@media  (max-width: 620px){
+    .container__title{
+        font-size: 4rem;
+    }
+}
