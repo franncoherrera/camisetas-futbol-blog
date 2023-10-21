@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid flexible">
+  <div class="container-fluid">
     <ul class="navbar-nav">
+      <li class="navbar-nav titulo-nav">
+        <%= link_to "Inicio" , root_path , class: "nav-link active" %>
+      </li>
       <li class= "titulo-li">
         <h1 class= "titulo-nav">Bienvenido!</h1>
       </li>
@@ -10,12 +13,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class= "titulo-li">
-          <%= link_to "Inicio" , root_path , class: "nav-link active" %>
-        </li>
-      </ul>
+        <ul class="navbar-nav titulo-nav">
+            <%= link_to "Inicio" , root_path , class: "nav-link active" %>
+        </ul>
     </div>
-
   </div>
 </nav>
