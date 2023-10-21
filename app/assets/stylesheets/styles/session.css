@@ -1,0 +1,105 @@
+.fondo-login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    position: relative;
+
+    .contenedor-login {
+        width: 25%;
+        height: 70%;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        row-gap: 15px;
+        background-color: aliceblue;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .orden {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .field:nth-child(3) {
+                width: 100%;
+                display: flex;
+                flex-flow: row;
+                column-gap: 5px;
+
+                input:nth-child(2) {
+                    width: 15px;
+                }
+            }
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        input {
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 5px;
+            width: 100%;
+            border: 1px solid gray;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: var(--color-primario);
+            text-decoration: underline;
+        }
+    }
+
+    .contenedor-imagen {
+        background-image: url('iniesta');
+        background-size: cover;
+        background-position: center;
+        background-color: black;
+        height: 70%;
+        width: 40%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    img {
+        margin-top: -50px;
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+.boton-submit {
+    background-color: rgb(15, 49, 79);
+    color: white;
+}
+
+.boton-submit:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.fondo-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('iniesta');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    z-index: -1;
+}
