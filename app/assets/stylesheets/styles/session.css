@@ -1,12 +1,36 @@
-.fondo-login {
+.login__background {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
     position: relative;
+}
+.login__left {
+    background-image: url('iniesta');
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    height: 70%;
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 
-    .contenedor-login {
+.login__left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('iniesta');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    z-index: -1;
+}
+    /* .contenedor-login {
         width: 25%;
         height: 70%;
         padding: 15px;
@@ -61,16 +85,7 @@
         }
     }
 
-    .contenedor-imagen {
-        background-image: url('iniesta');
-        background-size: cover;
-        background-position: center;
-        background-color: black;
-        height: 70%;
-        width: 40%;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
+
 
     img {
         margin-top: -50px;
@@ -90,16 +105,5 @@
     color: black;
 }
 
-.fondo-login::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('iniesta');
-    background-size: cover;
-    background-position: center;
-    filter: blur(15px);
-    z-index: -1;
-}
+ 
+*/
