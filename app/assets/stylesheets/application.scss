@@ -4,9 +4,13 @@
 :root {
     --color-primario: #0f314f;
     --color-secundario: #9fabc8;
+    --color-terciario: aliceblue;
     --color-background: rgb(215, 215, 143);
+    
     --color-iconos-neutrales: #eee;
-    --color-neutro: white;
+    --color-neutro-white: white;
+    --color-neutro-black: black;
+    --color-bordes: gray;
 }
 
 html {
@@ -33,7 +37,7 @@ body{
 }
 
 .navbar-brand {
-    color: var(--color-neutro);
+    color: var(--color-neutro-white);
 }
 
 .navbar-nav{
@@ -44,28 +48,21 @@ body{
 
 .navbar-nav .nav-item form button {
     background-color: var(--color-primario) !important;
-    color: var(--color-neutro);
+    color: var(--color-neutro-white);
     border: none;
 }
 
 .nav-link {
-    color: var(--color-neutro) !important;
+    color: var(--color-neutro-white) !important;
     transition: all 300ms ease-in-out;
     padding: 1rem;
     border-radius: 0.5rem;
 }
-@media  (min-width: 992px){
-    .nav-link:hover {
-        color: var(--color-primario) !important;
-        background-color:  var(--color-neutro);
-    }
-}
-
 
 .nav-link>button {
     border: none;
     background-color: var(--color-primario) !important;
-    color: var(--color-neutro);
+    color: var(--color-neutro-white);
 }
 
 .navbar-toggler {
@@ -86,7 +83,7 @@ body{
 }
 
 .titulo-nav {
-    color: var(--color-neutro);
+    color: var(--color-neutro-white);
     font-size: 1.6rem;
     margin: 0;
     font-weight: bold;
@@ -97,6 +94,14 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
+@media  (min-width: 992px){
+    .nav-link:hover {
+        color: var(--color-primario) !important;
+        background-color:  var(--color-neutro-white);
+    }
+}
+
 
 ////***** FIN NAVBAR *****////
 
