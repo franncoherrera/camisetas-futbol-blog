@@ -64,7 +64,6 @@ a {
 
 a:hover {
   color: var(--color-primario);
-  text-decoration: underline;
 }
 
 .form-inputs,

@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <% if current_user %>
           <ul class="navbar-nav titulo-nav">
-            <%= link_to "Cerrar sesión" , destroy_user_session_path , class: "nav-link active" %>
+            <%= button_to "Cerrar sesión" , destroy_user_session_path , class: "nav-link active", method: :delete %>
           </ul> 
         <% else %>
           <ul class="navbar-nav titulo-nav" style="margin-left: 1rem">

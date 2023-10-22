@@ -84,7 +84,6 @@ input {
 
 a:hover {
   color: var(--color-primario);
-  text-decoration: underline;
 }
 
 .right__links {
