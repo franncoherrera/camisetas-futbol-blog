@@ -10,7 +10,7 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: DATABASE_URL
+      - key: postgres://blog_camisetas:jXMlBNU3zT3OkcYpS7zQYuvSC0wA66n8@dpg-ckoqb60ujous73dt6ccg-a/blog_camisetas
         fromDatabase:
           name: blog_camisetas
           property: connectionString
