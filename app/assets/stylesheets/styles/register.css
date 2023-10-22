@@ -1,0 +1,126 @@
+.register__left {
+  width: 25%;
+  height: 60rem;
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  row-gap: 1.5rem;
+
+  background-color: var(--color-terciario);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.register__left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("diego");
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.register__right {
+  background-image: url("diego");
+  background-size: cover;
+  background-position: center;
+  height: 60rem;
+  width: 40%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.left__title {
+  font-weight: bold;
+}
+
+.left__container-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+input {
+  border: 1px solid var(--color-bordes);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--color-bordes);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-neutro-black);
+}
+
+a:hover {
+  color: var(--color-primario);
+}
+
+.form-inputs,
+.form-actions,
+.form-link,
+.button-submit {
+  font-size: 1.5rem;
+  font-family: var(--bs-body-font-family);
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.left__logo {
+  width: 15rem;
+  height: 15rem;
+}
+
+.left__button-submit {
+  margin-top: 1rem;
+  background-color: var(--color-primario);
+  color: var(--color-neutro-white);
+  border-radius: 1rem;
+  transition: all 300ms ease-in-out;
+}
+
+.left__button-submit:hover {
+  background-color: var(--color-terciario);
+  color: var(--color-neutro-primario);
+  border: 1px solid var(--color-primario);
+}
+
+@media screen and (max-width: 830px) {
+  .register__right {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0;
+  }
+
+  .register__left::before {
+    display: none;
+  }
+
+  .register__left {
+    border-radius: 1rem;
+    width: 60%;
+    height: 55%;
+    opacity: 90%;
+  }
+
+  .left__logo {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}

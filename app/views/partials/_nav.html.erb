@@ -13,9 +13,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav titulo-nav">
-            <%= link_to "Iniciar sesión" , new_user_session_path , class: "nav-link active" %>
-        </ul>
-    </div>
+        <% if current_user %>
+          <ul class="navbar-nav titulo-nav">
+            <%= button_to "Cerrar sesión" , destroy_user_session_path , class: "nav-link active", method: :delete %>
+          </ul> 
+        <% else %>
+          <ul class="navbar-nav titulo-nav" style="margin-left: 1rem">
+              <%= link_to "Iniciar sesión" , new_user_session_path , class: "nav-link active" %>
+          </ul>
+          <ul class="navbar-nav titulo-nav" style="margin-left: 1rem">
+            <%= link_to "Registrarse" , new_user_registration_path , class: "nav-link active" %>
+          </ul>
+
+        <% end %>   
+      </div>
   </div>
 </nav>

@@ -105,3 +105,21 @@ body{
 
 ////***** FIN NAVBAR *****////
 
+
+/////***** COMPARTIDO INICIO DE SESIÓN Y REGISTRO *****////
+
+
+.login__background,
+.register__background {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+
+
+
+/////***** FIN COMPARTIDO INICIO DE SESIÓN Y REGISTRO *****////
