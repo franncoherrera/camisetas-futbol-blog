@@ -55,7 +55,6 @@
 .field,
 .actions {
   font-size: 1.7rem;
-  font-family: var(--bs-body-font-family);
 }
 
 #user_email,
@@ -93,7 +92,6 @@ a:hover {
   flex-direction: column;
   row-gap: 1rem;
   color: var(--color-neutro-black);
-  font-family: var(--bs-body-font-family);
   font-size: 1.5rem;
 }
 
