@@ -10,7 +10,6 @@
   padding-bottom: 2rem;
 }
 
-
 .create__form {
   width: 50%;
   padding: 1rem;
@@ -76,57 +75,57 @@ span {
   display: flex;
 }
 
-.profile_birthday{
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.profile_birthday {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.create__button-submit{
-    width: auto;
-    font-size: 1.5rem;
-    background-color: var(--color-primario);
-    color: var(--color-neutro-white);
-    transition: all 300ms ease-in-out;
+.create__button-submit {
+  width: auto;
+  font-size: 1.5rem;
+  background-color: var(--color-primario);
+  color: var(--color-neutro-white);
+  transition: all 300ms ease-in-out;
 }
 
-.create__button-submit:hover{
-    background-color: var(--color-secundario);
-    color: var(--color-primario);
-    border: 1px solid var(--color-primario);
-
+.create__button-submit:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border: 1px solid var(--color-primario);
 }
 
-
+#profile_position_id {
+  width: 55%;
+}
 @media screen and (max-width: 865px) {
-  .profile_birthday{
+  .profile_birthday {
     display: block !important;
   }
-  label{
+  label {
     font-size: 1.8rem;
   }
-  input{
+  input,
+  #profile_position_id {
     width: 90%;
   }
-
 }
 
 @media screen and (max-width: 550px) {
-  .form__title{
+  .form__title {
     width: 80%;
   }
-  .create__form{
+  .create__form {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 865px) {
-
-  label{
+  label {
     font-size: 1.3rem;
   }
-  input{
+  input {
     font-size: 1.3rem;
   }
 }
