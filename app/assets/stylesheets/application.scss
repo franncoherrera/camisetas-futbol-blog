@@ -12,7 +12,7 @@
     --color-neutro-black: black;
     --color-bordes: gray;
 
-    --color-error: red;
+    --color-error: rgb(150, 19, 19);
 }
 
 html {
@@ -84,13 +84,23 @@ body{
 
 
 .titulo-li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
+}
+.titulo-li__responsive{
+    padding: 1rem;
+    display: none;
+}
+
+.titulo-li__color{
+    display: block;
+    color: var(--color-secundario);
+    padding-left: 1rem;
 }
 
 .titulo-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--color-neutro-white);
     font-size: 1.6rem;
     margin: 0;
@@ -103,11 +113,29 @@ body{
     align-items: center;
 }
 
+/*Media cuando aparece el menu despleglabe*/
+@media  (max-width: 992px){
+    .titulo-li{
+        display: none;
+    }
+    .titulo-li__responsive{
+        display: block;
+    }
+    .titulo-li__color{
+        padding-left: 0;
+    }
+    .titulo-nav{
+        display: block;
+    }
+    
+}
+
 @media  (min-width: 992px){
     .nav-link:hover {
         color: var(--color-primario) !important;
         background-color:  var(--color-neutro-white);
     }
+
 }
 
 

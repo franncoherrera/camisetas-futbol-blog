@@ -1,24 +1,15 @@
 .background__create-profile {
-  height: 100%;
+  background-image: url("fondo2.jpg");
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
 }
 
-.background__create-profile::before {
-  content: "";
-  background-image: url("fondo2.jpg");
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: rotate(180deg);
-  z-index: -1;
-  filter: brightness(0.8);
-}
 
 .create__form {
   width: 50%;
@@ -105,4 +96,37 @@ span {
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
 
+}
+
+
+@media screen and (max-width: 865px) {
+  .profile_birthday{
+    display: block !important;
+  }
+  label{
+    font-size: 1.8rem;
+  }
+  input{
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .form__title{
+    width: 80%;
+  }
+  .create__form{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 865px) {
+
+  label{
+    font-size: 1.3rem;
+  }
+  input{
+    font-size: 1.3rem;
+  }
 }

@@ -5,7 +5,7 @@
         <%= link_to "Inicio" , root_path , class: "nav-link active" %>
       </li>
       <li class= "titulo-li">
-        <h1 class= "titulo-nav">Bienvenido!</h1>
+        <h1 class= "titulo-nav">Bienvenido <% if current_user %><span class="titulo-li__color"><%= current_user.email %><% end %></span>!</h1>
       </li>
     </ul>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -14,6 +14,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <% if current_user %>
+          <li class= "titulo-li__responsive">
+            <h1 class= "titulo-nav">Bienvenido <% if current_user %><span class="titulo-li__color"><%= current_user.email %><% end %>!</span></h1>
+          </li>
+          <% if current_user.profile.present? %>
+            <ul class="navbar-nav titulo-nav">
+              <%= link_to "Ver perfil" , profile_path(current_user.id) , class: "nav-link active" %>
+            </ul> 
+          <% else %>
+            <ul class="navbar-nav titulo-nav">
+              <%= link_to "Crear perfil" , new_profile_path(current_user) , class: "nav-link active" %>
+            </ul> 
+          <% end %>   
           <ul class="navbar-nav titulo-nav">
             <%= link_to "Ver camisetas" , shirts_path , class: "nav-link active" %>
           </ul> 
