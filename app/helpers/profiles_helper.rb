@@ -2,7 +2,7 @@ module ProfilesHelper
     #Validar si existe el perfil
     def validates_profile
         if current_user.profile.present?
-            redirect_to profile_path(current_user.profiles_id)
+            redirect_to profile_path(current_user.profile.id)
         end
     end 
 

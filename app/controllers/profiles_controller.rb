@@ -58,7 +58,7 @@ class ProfilesController < ApplicationController
 
   # DELETE /profiles/1 or /profiles/1.json
   def destroy
-    current_user.update(profiles_id: null)
+    current_user.profile.update(id: nil)
     @profile.destroy
     respond_to do |format|
       format.html { redirect_to profiles_url, notice: "Profile was successfully destroyed." }
@@ -74,7 +74,7 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      if (current_user.profiles_id)
+      if (current_user.profile.id)
         @profile = Profile.find(params[:id])
       else
         redirect_to new_profile_path

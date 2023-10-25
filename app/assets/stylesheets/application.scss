@@ -50,6 +50,8 @@ body{
 
 .navbar-nav{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     column-gap: 2rem;
 }
