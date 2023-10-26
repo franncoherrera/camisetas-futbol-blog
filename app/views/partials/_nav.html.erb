@@ -19,7 +19,7 @@
           </li>
           <% if current_user.profile.present? %>
             <ul class="navbar-nav titulo-nav">
-              <%= link_to "Ver perfil" , profile_path(current_user.id) , class: "nav-link active" %>
+              <%= link_to "Ver perfil" , profile_path(current_user.profile.id) , class: "nav-link active" %>
             </ul> 
           <% else %>
             <ul class="navbar-nav titulo-nav">
