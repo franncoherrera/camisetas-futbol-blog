@@ -1,12 +1,14 @@
-<div class="pestanas-no-responsive">
+<div class="pestanas__no-responsive">
     <%= link_to "Mi perfil", profile_path(@profile) %>
     <%= link_to "Camisetas", my_shirts_path(@profile.id) %>
     <% if @profile.user_id == current_user.id %>
       <%= link_to "Editar el perfil", edit_profile_path(@profile) %>
     <% end %>
 </div>
-<div class="pestanas-reponsive">
+<div class="pestanas__reponsive">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag "styles/navbar_profile", "data-turbo-track": "reload" %>
+
     <div class="topnav" id="myTopnav">
       <a style="justify-content: start">Opciones</a>
       <%= link_to "Mi perfil", profile_path(@profile) %>

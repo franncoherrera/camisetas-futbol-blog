@@ -1,3 +1,5 @@
+/***Contenedor de todo el perfil***/
+
 .profile__background {
   flex-flow: column;
   background-image: url("fondo1");
@@ -6,6 +8,7 @@
 }
 
 .container__data {
+  height: 60rem;
   width: 70%;
   margin: 0 auto;
   background-color: var(--color-secundario);
@@ -80,9 +83,20 @@
   animation: rotar 2s linear;
 }
 
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+
+}
+
 .profile__container {
   padding: 1rem;
-  padding-left: 15px;
+  padding-left: 1.5rem;
 }
 
 .container__title {
@@ -101,131 +115,47 @@
   font-size: 3rem;
 }
 
-/* .pestanas-no-responsive {
-        height: 35px;
-        width: 70%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+/*** Pestañas ***/
 
-        a {
-            width: 150px;
-            background-color: var(--color-primario);
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            padding: 5px;
-            text-decoration: none;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+.pestanas__no-responsive{
+    height: 3.5rem;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-    .pestanas-reponsive {
-        display: none !important;
-        height: 35px;
-        width: 90%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+.pestanas__no-responsive a {
+    width: 15rem;
+    font-size: 1.5rem;
+    background-color: var(--color-primario);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    padding: 0.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        a {
-            width: 150px;
-            background-color: var(--color-primario);
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            padding: 5px;
-            text-decoration: none;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+.pestanas__reponsive {
+    display: none !important;
+    height: 35px;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-
-
-        .contenedor-datos {
-            width: 65%;
-
-            .contenedor-general {
-                padding: 10px;
-                padding-left: 15px;
-
-                .contenedor-h1 {
-                    display: flex;
-                    flex-direction: row;
-                    column-gap: 15px;
-                    padding: 10px;
-
-                    h1:nth-child(1) {
-                        color: #eee;
-                        font-size: 30px;
-                    }
-
-                    h1:nth-child(2) {
-                        color: #093d6a;
-                        font-size: 30px;
-                    }
-
-
-                }
-            }
-
-        }
-
-        .contenedor-foto {
-            width: 35%;
-            position: relative;
-
-            .clip {
-                position: absolute;
-                top: -14px;
-                right: 0px;
-                width: 90px;
-                height: 90px;
-                z-index: 3;
-            }
-
-            .cinta {
-                position: absolute;
-                width: 90px;
-                height: 90px;
-                z-index: 3;
-                bottom: -20px;
-                left: -20px;
-            }
-
-            .contenedor-foto-individual {
-                height: 50%;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                right: 0;
-                z-index: 2;
-
-
-
-                @keyframes rotar {
-                    from {
-                        transform: rotateY(0deg);
-                    }
-
-                    to {
-                        transform: rotateY(360deg);
-                    }
-
-                }
-            }
-        }
-
-        .linea {
-            position: absolute;
-            bottom: 100px;
-            width: 100%;
-            border-bottom: 4px solid #eee;
-        }
-
-    }
-} */
+.pestanas__reponsive a {
+    width: 15rem;
+    background-color: var(--color-primario);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    padding: 5rem;
+    text-decoration: none;
+    color: var(--color-neutro-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
