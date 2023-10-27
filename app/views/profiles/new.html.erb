@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/create_profile", "data-turbo-track": "reload" %>
+</head>
+<body>
+  <div class="background__create-profile">
+    <h1 class="form__title">Crear perfil</h1>
+    <div class="create__form">
+      <%= render "form", profile: @profile %>
+      <br>
+    </div>
+  </div>
+
+</body>
+</html>

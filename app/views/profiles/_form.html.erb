@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@profile) do |f| %>
+  <div class="create__container-form">
+  
+    <div class="form-inputs">
+      <%= f.input :profile_name, label: "*Nombre:" %>
+      <%= f.input :surname, label: "*Apellido:" %>
+      <%= f.input :age, label: "*Edad:" %>   
+      <%= f.association :position, label_method: :team_position ,label: "*Posición:"%>
+      <%= f.association :team, label_method: :team_name ,label: "*Equipo:" ,:include_blank => false %>
+      <%= f.input :birthday, label: "*Fecha de nacimiento:", start_year: Date.current.year - 50, end_year: Date.current.year %>
+      <%= f.input :image, label: "*Subir imagen:" %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Aceptar", class: "create__button-submit" %>
+    </div>
+  </div>
+
+<% end %>

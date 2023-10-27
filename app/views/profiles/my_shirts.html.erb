@@ -1,0 +1,16 @@
+<div class="fondo-mi-perfil">
+  <%= render 'pestanas' %>
+    <div class="contenedor-my-shirt">
+      <h1 class="titulo">MIS CAMISETAS</h1>
+      <div class="scroll">
+        <% @shirts.each do |shirt| %>
+          <div class="imagen">
+            <%= show_photo_shirt(shirt) %>
+            <%= link_to shirt_path(shirt.id), class: "blur-button" do %>
+                Ver
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

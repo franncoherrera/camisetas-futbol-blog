@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  fundation_year: 1
+  team_description: MyString
+
+two:
+  team_name: MyString
+  fundation_year: 1
+  team_description: MyString

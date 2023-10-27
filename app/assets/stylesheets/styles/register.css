@@ -71,7 +71,6 @@ a:hover {
 .form-link,
 .button-submit {
   font-size: 1.5rem;
-  font-family: var(--bs-body-font-family);
 }
 
 .form-inputs {

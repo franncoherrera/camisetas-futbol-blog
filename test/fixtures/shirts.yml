@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  birth_year: MyString
+  shirt_description: MyString
+  shirt_title: MyString
+
+two:
+  birth_year: MyString
+  shirt_description: MyString
+  shirt_title: MyString

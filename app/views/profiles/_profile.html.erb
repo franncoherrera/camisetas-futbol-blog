@@ -1,0 +1,26 @@
+<div class="profile__container" id="<%= dom_id profile %>">
+  <div class="container__title">
+    <h1>Nombre:</h1>
+    <h1><%= @profile.profile_name %></h1>
+  </div>
+  <div class="container__title">    
+    <h1>Apellido:</h1>
+    <h1><%= @profile.surname %></h1>
+  </div>
+  <div class="container__title">
+    <h1>Edad:</h1>
+    <h1><%= @profile.age%> años</h1>
+  </div>
+  <div class="container__title">
+    <h1>Nacimiento:</h1>
+    <h1><%= @profile.birthday%></h1>
+  </div>
+  <div class="container__title">
+    <h1>Posición:</h1>
+    <h1><%= @profile.position.team_position %></h1>
+  </div>
+  <div class="container__title">
+    <h1>Equipo:</h1>
+    <h1><%= @profile.team.team_name %></h1>
+  </div>
+</div>

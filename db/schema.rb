@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_20_015915) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_23_132737) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,43 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_20_015915) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "positions", force: :cascade do |t|
+    t.string "team_position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "profile_name"
+    t.string "surname"
+    t.integer "age"
+    t.date "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.bigint "team_id", null: false
+    t.bigint "position_id", null: false
+    t.index ["position_id"], name: "index_profiles_on_position_id"
+    t.index ["team_id"], name: "index_profiles_on_team_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "shirts", force: :cascade do |t|
+    t.string "birth_year"
+    t.string "shirt_description"
+    t.string "shirt_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "team_name"
+    t.integer "fundation_year"
+    t.string "team_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -66,4 +103,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_20_015915) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "profiles", "positions"
+  add_foreign_key "profiles", "teams"
+  add_foreign_key "profiles", "users"
 end
