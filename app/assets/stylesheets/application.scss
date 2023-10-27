@@ -67,6 +67,7 @@ body{
     transition: all 300ms ease-in-out;
     padding: 1rem;
     border-radius: 0.5rem;
+    margin-right: 1rem;
 }
 
 .nav-link>button {
@@ -144,11 +145,12 @@ body{
 ////***** FIN NAVBAR *****////
 
 
-/////***** COMPARTIDO INICIO DE SESIÓN Y REGISTRO *****////
+/////***** COMPARTIDO INICIO DE SESIÓN , REGISTRO , PERFIL *****////
 
 
 .login__background,
-.register__background {
+.register__background,
+.profile__background {
     min-height: 100vh;
     display: flex;
     align-items: center;

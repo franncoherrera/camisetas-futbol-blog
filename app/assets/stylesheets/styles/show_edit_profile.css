@@ -1,0 +1,231 @@
+.profile__background {
+  flex-flow: column;
+  background-image: url("fondo1");
+  background-size: cover;
+  background-position: center;
+}
+
+.container__data {
+  width: 70%;
+  margin: 0 auto;
+  background-color: var(--color-secundario);
+  display: flex;
+  flex-flow: row;
+  position: relative;
+}
+
+.data__details {
+  width: 65%;
+}
+
+.data__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  width: 100%;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3.5rem;
+  background: var(--color-iconos-neutrales);
+  color: var(--color-secundario);
+  font-weight: 900;
+}
+
+.data__foto {
+  width: 35%;
+  position: relative;
+}
+
+.data__cinta {
+  position: absolute;
+  top: -1.4rem;
+  right: 0;
+  width: 9rem;
+  height: 9rem;
+  z-index: 3;
+}
+
+.foto__container {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.container__cinta {
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  z-index: 3;
+  bottom: -2rem;
+  left: -2rem;
+}
+
+.foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 20px solid #eee;
+}
+
+.png {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5.5rem;
+  cursor: pointer;
+  filter: drop-shadow(0px 7px 21px #eee);
+  animation: rotar 2s linear;
+}
+
+.profile__container {
+  padding: 1rem;
+  padding-left: 15px;
+}
+
+.container__title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+  padding: 1rem;
+}
+.container__title h1:nth-child(1) {
+  color: var(--color-iconos-neutrales);
+  font-size: 3rem;
+}
+
+.container__title h1:nth-child(2) {
+  color: var(--color-primario);
+  font-size: 3rem;
+}
+
+/* .pestanas-no-responsive {
+        height: 35px;
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        a {
+            width: 150px;
+            background-color: var(--color-primario);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .pestanas-reponsive {
+        display: none !important;
+        height: 35px;
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        a {
+            width: 150px;
+            background-color: var(--color-primario);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
+
+        .contenedor-datos {
+            width: 65%;
+
+            .contenedor-general {
+                padding: 10px;
+                padding-left: 15px;
+
+                .contenedor-h1 {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 15px;
+                    padding: 10px;
+
+                    h1:nth-child(1) {
+                        color: #eee;
+                        font-size: 30px;
+                    }
+
+                    h1:nth-child(2) {
+                        color: #093d6a;
+                        font-size: 30px;
+                    }
+
+
+                }
+            }
+
+        }
+
+        .contenedor-foto {
+            width: 35%;
+            position: relative;
+
+            .clip {
+                position: absolute;
+                top: -14px;
+                right: 0px;
+                width: 90px;
+                height: 90px;
+                z-index: 3;
+            }
+
+            .cinta {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                z-index: 3;
+                bottom: -20px;
+                left: -20px;
+            }
+
+            .contenedor-foto-individual {
+                height: 50%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+
+
+
+                @keyframes rotar {
+                    from {
+                        transform: rotateY(0deg);
+                    }
+
+                    to {
+                        transform: rotateY(360deg);
+                    }
+
+                }
+            }
+        }
+
+        .linea {
+            position: absolute;
+            bottom: 100px;
+            width: 100%;
+            border-bottom: 4px solid #eee;
+        }
+
+    }
+} */

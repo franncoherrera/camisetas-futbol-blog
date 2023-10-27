@@ -15,4 +15,5 @@ Rails.application.config.assets.precompile += %w( styles/home.css )
 Rails.application.config.assets.precompile += %w( styles/session.css )
 Rails.application.config.assets.precompile += %w( styles/register.css )
 Rails.application.config.assets.precompile += %w( styles/create_profile.css )
+Rails.application.config.assets.precompile += %w( styles/show_edit_profile.css )
 
