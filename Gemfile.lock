@@ -283,27 +283,27 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap
+  bootstrap (>= 5.3.1, < 6.0)
   capybara
   debug
-  devise
-  firebase-ruby
+  devise (>= 4.1.0, < 5.0)
+  firebase-ruby (>= 0.3.1, < 0.4.0)
   image_processing (~> 1.2)
   importmap-rails
-  jbuilder
-  jquery-rails
+  jbuilder (>= 2.0, < 3.0)
+  jquery-rails (>= 4.6.0, < 5.0)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.1)
-  sassc-rails
+  sassc-rails (>= 2.0.0, < 3.0.0)
   selenium-webdriver
-  simple_form
-  sprockets-rails
+  simple_form (>= 5.2.0, < 6.0)
+  sprockets-rails (>= 3.0.0, < 4.0.0)
   stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
-  will_paginate
+  will_paginate (>= 4.0.0, < 5.0)
 
 RUBY VERSION
    ruby 3.2.2p53

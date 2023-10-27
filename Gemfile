@@ -5,33 +5,20 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-
-# Use postgresql as the database for Active Record
+gem "sprockets-rails", ">= 3.0.0", "< 4.0.0"
 gem "pg", "~> 1.1"
-
-# Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-gem "devise"
-gem "bootstrap"
-gem "sassc-rails"
-gem "simple_form"
-gem "jquery-rails"
-gem "will_paginate"
-gem "firebase-ruby"
+gem "jbuilder", ">= 2.0", "< 3.0"
+gem "devise", ">= 4.1.0", "< 5.0"
+gem "bootstrap", ">= 5.3.1", "< 6.0"
+gem "sassc-rails", ">= 2.0.0", "< 3.0.0"
+gem "simple_form", ">= 5.2.0", "< 6.0"
+gem "jquery-rails", ">= 4.6.0", "< 5.0"
+gem "will_paginate", ">= 4.0.0", "< 5.0"
+gem "firebase-ruby", ">= 0.3.1", "< 0.4.0"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
