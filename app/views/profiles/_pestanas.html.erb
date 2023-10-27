@@ -7,8 +7,6 @@
 </div>
 <div class="pestanas__reponsive">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <%= stylesheet_link_tag "styles/navbar_profile", "data-turbo-track": "reload" %>
-
     <div class="topnav" id="myTopnav">
       <a style="justify-content: start">Opciones</a>
       <%= link_to "Mi perfil", profile_path(@profile) %>
@@ -23,12 +21,12 @@
 </div>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
   }
-}
 </script>

@@ -84,14 +84,13 @@
 }
 
 @keyframes rotar {
-    from {
-        transform: rotateY(0deg);
-    }
+  from {
+    transform: rotateY(0deg);
+  }
 
-    to {
-        transform: rotateY(360deg);
-    }
-
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .profile__container {
@@ -117,45 +116,81 @@
 
 /*** Pestañas ***/
 
-.pestanas__no-responsive{
-    height: 3.5rem;
-    width: 70%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.pestanas__no-responsive {
+  height: 3.5rem;
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .pestanas__no-responsive a {
-    width: 15rem;
-    font-size: 1.5rem;
-    background-color: var(--color-primario);
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-    padding: 0.5rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 15rem;
+  font-size: 1.5rem;
+  background-color: var(--color-primario);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 0.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pestanas__reponsive {
-    display: none !important;
-    height: 35px;
-    width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: none !important;
+  height: 35px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .pestanas__reponsive a {
-    width: 15rem;
-    background-color: var(--color-primario);
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-    padding: 5rem;
-    text-decoration: none;
-    color: var(--color-neutro-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 15rem;
+  background-color: var(--color-primario);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 5rem;
+  text-decoration: none;
+  color: var(--color-neutro-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-height: 800px) {
+  .profile__background {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .data__title {
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+  }
+  .container__title h1:nth-child(1),
+  .container__title h1:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  .container__data {
+    flex-flow: column;
+    width: 90%;
+  }
+  .pestanas__no-responsive {
+    display: none;
+  }
+
+  .pestanas__reponsive {
+    display: initial !important;
+  }
+
+  .data__details {
+    width: 100%;
+    height: auto;
+    z-index: 5;
+  }
 }
