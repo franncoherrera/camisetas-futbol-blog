@@ -1,10 +1,33 @@
-<h1>Editing profile</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/show_edit_profile", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/navbar_profile", "data-turbo-track": "reload" %>
 
-<%= render "form", profile: @profile %>
-
-<br>
-
-<div>
-  <%= link_to "Show this profile", @profile %> |
-  <%= link_to "Back to profiles", profiles_path %>
-</div>
+</head>
+<body>
+  <div class="profile__background">
+    <!-- <p style="color: green"><%= notice %></p> -->
+    <%= render 'pestanas' %>
+    <div class="container__data">
+      <div class="data__details">
+          <h1 class="data__title">PERFIL DEL JUGADOR</h1>
+          <%= render "form", profile: @profile %>
+      </div>
+      <div class="data__foto">
+        <%= image_tag "cinta" , class: 'data__cinta' %>
+        <div class="foto__container">
+          <%= image_tag "cinta" , class: 'container__cinta' %>
+          <%= show_photo_profile(@profile) %>
+          <%= show_shield_team(@profile) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
