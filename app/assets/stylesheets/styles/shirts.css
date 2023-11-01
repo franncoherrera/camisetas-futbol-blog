@@ -1,0 +1,50 @@
+.container__shirts{
+    position: absolute;
+    top: 5.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+/* 
+.pantalla {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .titulo-pp {
+        font-family: 'Poppins', sans-serif;
+        color: var(--color-primario);
+        font-weight: bold;
+        padding-top: 15px;
+
+    }
+
+    .paginacion {
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+
+        .pagination {
+            font-size: 25px;
+            display: flex;
+            flex-flow: row;
+            column-gap: 5px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: end;
+            font-family: "Rubik", sans-serif;
+        }
+    }
+} */

@@ -3,7 +3,8 @@ class ShirtsController < ApplicationController
 
   # GET /shirts or /shirts.json
   def index
-    @shirts = Shirt.all
+    @shirts = Shirt.order(created_at: :desc)
+    @teams = Team.all
   end
 
   # GET /shirts/1 or /shirts/1.json
@@ -22,7 +23,7 @@ class ShirtsController < ApplicationController
   # POST /shirts or /shirts.json
   def create
     @shirt = Shirt.new(shirt_params)
-
+    @shirt.profile_id = current_user.profiles_id
     respond_to do |format|
       if @shirt.save
         format.html { redirect_to shirt_url(@shirt), notice: "Shirt was successfully created." }

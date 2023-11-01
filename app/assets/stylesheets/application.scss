@@ -28,6 +28,9 @@ body{
 }
 
 .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-error);
     font-weight: bold;
     font-size: 1.4rem;

@@ -19,6 +19,9 @@
           </li>
           <% if current_user.profile.present? %>
             <ul class="navbar-nav titulo-nav">
+              <%= link_to "Crear post" , new_shirt_path , class: "nav-link active" %>
+            </ul>
+            <ul class="navbar-nav titulo-nav">
               <%= link_to "Ver perfil" , profile_path(current_user.profile.id) , class: "nav-link active" %>
             </ul> 
           <% else %>

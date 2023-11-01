@@ -1,9 +1,19 @@
-<h1>New shirt</h1>
-
-<%= render "form", shirt: @shirt %>
-
-<br>
-
-<div>
-  <%= link_to "Back to shirts", shirts_path %>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/shirts", "data-turbo-track": "reload" %>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container__shirts">
+    <h1 class="titulo-pp">Nueva camiseta</h1>
+    <div class="contenedor-nueva-camiseta">
+      <%= render "form", shirt: @shirt %>
+    </div>
+  </div>
+</body>
+</html>

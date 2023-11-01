@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_23_132737) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_01_123508) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -79,6 +79,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_23_132737) do
     t.string "shirt_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "team_id", null: false
+    t.bigint "profile_id", null: false
+    t.index ["profile_id"], name: "index_shirts_on_profile_id"
+    t.index ["team_id"], name: "index_shirts_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -106,4 +110,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_23_132737) do
   add_foreign_key "profiles", "positions"
   add_foreign_key "profiles", "teams"
   add_foreign_key "profiles", "users"
+  add_foreign_key "shirts", "profiles"
+  add_foreign_key "shirts", "teams"
 end

@@ -1,15 +1,25 @@
-
-<%= simple_form_for(@shirt) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :birth_year %>
-    <%= f.input :shirt_description %>
-    <%= f.input :shirt_title %>
+<div class="contenedor-nueva-camiseta__1">
+  <%= image_tag 'ney' %>
+  <div class="banner">
+    <h1>Sumate a los</h1>
+    <h1>fanáticos</h1>
+    <h1>de las </h1>
+    <h1>camisetas!</h1>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>
+<div class="contenedor-nueva-camiseta__2">
+  <%= simple_form_for @shirt do |f| %>
+    <%= f.input :shirt_title, label: "*Título:" %>
+    <div class="texto-enr">
+      <label>*Descripción:</label>
+      <%= f.rich_text_area :shirt_description,class: "texto" %>
+    </div>
+    <%= f.input :birth_year, label: "*Año:"%>
+    <%= f.association :team, label_method: :team_name ,label: "*Equipo:" ,:include_blank => false %>
+    <%= f.input :shirt_image, label: "*Subir imagen:" %>
+    <div class="botones-perfil">
+      <%= f.submit "Crear camiseta"%>
+      <%= link_to "Volver", shirts_path %>
+    </div>
+  <% end %>
+</div>

@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/shirts", "data-turbo-track": "reload" %>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container__shirts">
+    <h1 class="titulo-pp">Camisetas recientes</h1>
+    <div id="shirts">
+      <div class="wrapper">
+          <%= render 'shirts' %>
+      </div>
+    </div>
+  </div>
 
-<h1>Shirts</h1>
-
-<div id="shirts">
-  <% @shirts.each do |shirt| %>
-    <%= render shirt %>
-    <p>
-      <%= link_to "Show this shirt", shirt %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New shirt", new_shirt_path %>
+</body>
+</html>
