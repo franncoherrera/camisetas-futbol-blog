@@ -282,6 +282,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  actiontext
   bootsnap
   bootstrap (>= 5.3.1, < 6.0)
   capybara

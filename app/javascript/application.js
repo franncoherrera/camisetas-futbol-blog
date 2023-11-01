@@ -4,3 +4,6 @@ import "controllers"
 import "popper"
 import "bootstrap"
 import "@rails/actiontext"
+
+import "trix"
+import "@rails/actiontext"

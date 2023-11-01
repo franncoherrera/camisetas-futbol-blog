@@ -23,7 +23,7 @@ class ShirtsController < ApplicationController
   # POST /shirts or /shirts.json
   def create
     @shirt = Shirt.new(shirt_params)
-    @shirt.profile_id = current_user.profiles_id
+    @shirt.profile_id = current_user.profile.id
     respond_to do |format|
       if @shirt.save
         format.html { redirect_to shirt_url(@shirt), notice: "Shirt was successfully created." }
@@ -66,6 +66,6 @@ class ShirtsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shirt_params
-      params.require(:shirt).permit(:birth_year, :shirt_description, :shirt_title)
+      params.require(:shirt).permit(:birth_year, :shirt_description, :shirt_title, :shirt_image, :team_id)
     end
 end

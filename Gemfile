@@ -18,6 +18,7 @@ gem "sassc-rails", ">= 2.0.0", "< 3.0.0"
 gem "simple_form", ">= 5.2.0", "< 6.0"
 gem "jquery-rails", ">= 4.6.0", "< 5.0"
 gem "will_paginate", ">= 4.0.0", "< 5.0"
+gem 'actiontext'
 gem "firebase-ruby", ">= 0.3.1", "< 0.4.0"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

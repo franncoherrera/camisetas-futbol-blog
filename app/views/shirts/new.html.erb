@@ -6,12 +6,14 @@
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "styles/shirts", "data-turbo-track": "reload" %>
-  <title>Document</title>
+  <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
+
+  <title>Nueva camiseta</title>
 </head>
 <body>
   <div class="container__shirts">
-    <h1 class="titulo-pp">Nueva camiseta</h1>
-    <div class="contenedor-nueva-camiseta">
+    <h1 class="shirt__title">Nueva camiseta</h1>
+    <div class="shirt__form">
       <%= render "form", shirt: @shirt %>
     </div>
   </div>

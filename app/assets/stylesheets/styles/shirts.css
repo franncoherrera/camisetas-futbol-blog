@@ -1,50 +1,166 @@
-.container__shirts{
-    position: absolute;
-    top: 5.5rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+body {
+  background-color: var(--color-background-secundario);
+}
+.container__shirts {
+  position: absolute;
+  top: 5.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
+.shirt__title {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-primario);
+  font-weight: bold;
+  padding-top: 1.5rem;
+}
+.shirt__form {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2.5rem;
 
+}
 
+.shirt__form-left {
+  width: 50vw;
+  max-height: 67rem;
+  min-height: 67rem;
+  background-color: var(--color-primario);
+}
 
+.shirt__form-left img {
+  position: absolute;
+  right: 50%;
+  width: 45rem;
+  bottom: 0;
+}
 
+.shirt__form-left .banner {
+  padding-left: 3rem;
+  padding-top: 5rem;
+  position: absolute;
+  z-index: 2;
+}
 
-/* 
-.pantalla {
-    position: absolute;
-    top: 55px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.shirt__form-left h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 8rem;
+  color: white;
+}
 
-    .titulo-pp {
-        font-family: 'Poppins', sans-serif;
-        color: var(--color-primario);
-        font-weight: bold;
-        padding-top: 15px;
+.shirt__form-right {
+  width: 50vw;
+  max-height: 67rem;
+  min-height: 67rem;
+  border: 15px solid var(--color-primario);
+}
 
+.shirt__form-right .simple_form {
+  margin: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-flow: column;
+  row-gap: 2.5rem;
+}
+.rigth__text {
+  width: 85%;
+}
+
+.string,
+.input {
+  display: flex;
+  flex-flow: row;
+  column-gap: 0.5rem;
+}
+
+.shirt__form-right .rigth__button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  column-gap: 2rem;
+}
+
+.button {
+  background-color: var(--color-primario);
+  color: var(--color-neutro-white);
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  transition: all 300ms ease-in-out;
+  border: 1px solid var(--color-primario);
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: var(--color-terciario);
+  color: var(--color-neutro-primario);
+  border: 1px solid var(--color-primario);
+}
+
+.text {
+  height: 15rem;
+  overflow: auto;
+}
+
+label {
+  font-size: 2rem;
+  color: var(--color-primario);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .shirt__form-left h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+    .shirt__form {
+        flex-direction: column;
+        row-gap: 0;
+        width: 100%;
+        padding-bottom: 2rem;
     }
 
-    .paginacion {
-        display: flex;
-        justify-content: flex-end;
-        width: 90%;
-
-        .pagination {
-            font-size: 25px;
-            display: flex;
-            flex-flow: row;
-            column-gap: 5px;
-            text-decoration: none;
-            align-items: center;
-            justify-content: end;
-            font-family: "Rubik", sans-serif;
-        }
+    .shirt__form-left {
+        width: 80%;
+        position: relative;
+        max-height: 50rem;
+        min-height: 50rem;
     }
-} */
+
+    .shirt__form-left img{
+        position: absolute;
+        right: 2rem;
+        width: 30rem;
+    }
+    .shirt__form-right {
+        width: 80%;
+        max-height: 60rem;
+        min-height: 60rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .shirt__form-left {
+        width: 95%;
+
+    }
+    .shirt__form-right {
+        width: 95%;
+    }
+
+    .shirt__form-left h1 {
+        font-size: 4rem;
+      }
+}

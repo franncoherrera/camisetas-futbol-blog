@@ -1,4 +1,4 @@
-<div class="contenedor-nueva-camiseta__1">
+<div class="shirt__form-left">
   <%= image_tag 'ney' %>
   <div class="banner">
     <h1>Sumate a los</h1>
@@ -7,19 +7,19 @@
     <h1>camisetas!</h1>
   </div>
 </div>
-<div class="contenedor-nueva-camiseta__2">
+<div class="shirt__form-right">
   <%= simple_form_for @shirt do |f| %>
     <%= f.input :shirt_title, label: "*Título:" %>
-    <div class="texto-enr">
+    <div class="rigth__text">
       <label>*Descripción:</label>
-      <%= f.rich_text_area :shirt_description,class: "texto" %>
+      <%= f.rich_text_area :shirt_description,class: "text" %>
     </div>
     <%= f.input :birth_year, label: "*Año:"%>
-    <%= f.association :team, label_method: :team_name ,label: "*Equipo:" ,:include_blank => false %>
+    <%= f.association :team, label_method: :team_name ,label: "*Equipo:", include_blank: "Selecciona un equipo" %>
     <%= f.input :shirt_image, label: "*Subir imagen:" %>
-    <div class="botones-perfil">
-      <%= f.submit "Crear camiseta"%>
-      <%= link_to "Volver", shirts_path %>
+    <div class="rigth__button">
+      <%= link_to "Volver", shirts_path , class: "button"%>
+      <%= f.submit "Crear camiseta", class: "button" %>
     </div>
   <% end %>
 </div>
