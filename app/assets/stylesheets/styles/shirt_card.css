@@ -1,0 +1,181 @@
+#shirts {
+  width: 100vw;
+}
+
+.shirt__title {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-primario);
+  font-weight: bold;
+  padding-top: 1.5rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 15px;
+  width: 90%;
+}
+
+.wrapper .card {
+  position: relative;
+  width: 325px;
+  height: 450px;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+.wrapper .card .poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper .card .poster::before {
+  content: "";
+  position: absolute;
+  bottom: -45%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.wrapper .card .poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.wrapper .card .marco {
+  width: 325px;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.wrapper .card .marco img {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .card:hover .poster::before {
+  bottom: 0;
+}
+
+.wrapper .card:hover .poster img {
+  transform: scale(1.1);
+}
+
+.wrapper .card .details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 1.5em 1.5em 2em;
+  background: #000a;
+  backdrop-filter: blur(16px) saturate(120%);
+  transition: 0.3s;
+  color: #fff;
+  z-index: 2;
+}
+
+.wrapper .card .details h1,
+.wrapper .card .details h2 {
+  font-weight: 700;
+}
+
+.wrapper .card .details h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.wrapper .card .details h2 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+.wrapper .card .details .rating {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 0.25em;
+}
+
+.wrapper .card .details .rating svg {
+  color: #e3c414 !important;
+}
+
+.wrapper .card .details .rating span {
+  margin-left: 0.25em;
+}
+
+.wrapper .card .details .tags {
+  display: flex;
+  gap: 0.375em;
+  margin-bottom: 0.875em;
+  font-size: 0.85em;
+}
+
+.wrapper .card .details .tags span {
+  padding: 0.35rem 0.65rem;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  border-radius: 50px;
+}
+
+.wrapper .card .details .desc {
+  color: #fff;
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.wrapper .card .details .cast h3 {
+  margin-bottom: 0.5em;
+}
+
+.wrapper .card .details .cast ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+.wrapper .card .details .cast ul li {
+  list-style: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid #fff;
+}
+
+.wrapper .card .details .cast ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .card:hover .details {
+  bottom: 0;
+}

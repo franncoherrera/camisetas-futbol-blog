@@ -6,12 +6,13 @@
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "styles/shirts", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/shirt_card", "data-turbo-track": "reload" %>
 
   <title>Document</title>
 </head>
 <body>
   <div class="container__shirts">
-    <h1 class="titulo-pp">Camisetas recientes</h1>
+    <h1 class="shirt__title">Camisetas recientes</h1>
     <div id="shirts">
       <div class="wrapper">
           <%= render 'shirts' %>
