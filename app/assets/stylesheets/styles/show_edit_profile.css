@@ -163,14 +163,22 @@
 
 .form-inputs {
   padding: 3rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
+}
+.foto__container-edit{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 .input {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   column-gap: 1rem;
   color: var(--color-primario);
   font-weight: bold;
@@ -188,6 +196,7 @@
   transition: all 300ms ease-in-out;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  width: auto;
 }
 
 .create__button-submit:hover {
@@ -200,9 +209,15 @@ input {
   border-radius: 1rem;
   border: none;
   padding: 0.2rem;
+  width: 50%;
 }
 /** Termina Editar Perfil **/
 
+@media screen and (max-width: 1200px){
+  .form-inputs{
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-height: 800px) {
   .profile__background {
     padding-top: 6rem;
@@ -223,6 +238,8 @@ input {
   .container__data {
     flex-flow: column;
     width: 90%;
+    height: auto;
+    padding-bottom: 3rem;
   }
   .pestanas__no-responsive {
     display: none;
@@ -259,5 +276,15 @@ input {
   }
   .foto {
     border: none;
+  }
+  .form-inputs{
+    font-size: 1.8rem;
+    row-gap: 1.8rem;
+  }
+  .foto__container-edit{
+    display: none;
+  }
+  .file{
+    width: 100%;
   }
 }

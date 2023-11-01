@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :shirts
-  resources :profiles, only: [:show, :create, :edit]
+  resources :profiles, only: [:show, :create, :edit, :update]
   get '/my_shirts/:id', to: 'profiles#my_shirts', as: :my_shirts
   
   resources :teams
