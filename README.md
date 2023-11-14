@@ -1,24 +1,36 @@
-# README
+# Blog de Camisetas de Fútbol
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este es un proyecto de blog desarrollado en Ruby on Rails, centrado en el apasionante mundo de las camisetas de fútbol. Aquí podrás encontrar noticias, análisis y curiosidades relacionadas con las camisetas utilizadas por los equipos de fútbol de todo el mundo.
 
-Things you may want to cover:
+## Requisitos
 
-* Ruby version
+- Ruby version 3.2.2
+- Rails version 7.1.1
 
-* System dependencies
+## Configuración del Entorno
 
-* Configuration
+Asegúrate de tener Ruby y Rails instalados en tu máquina antes de comenzar. Puedes instalar las dependencias ejecutando:
 
-* Database creation
+```bash
+bundle install 
+```
 
-* Database initialization
+Migra la base de datos con el siguiente comando:
 
-* How to run the test suite
+```bash
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Ejecutar la aplicación
 
-* Deployment instructions
+```bash
+rails server
+```
+Visita http://localhost:3000 en tu navegador para explorar el blog de camisetas de fútbol.
 
-* ...
+
+## Características
+
+- Publicaciones: crea, edita y elimina publicaciones sobre camisetas de fútbol.
+- Etiquetas: organiza las camisetas por equipo.
+- Usuarios: Regístrate, inicia sesión y gestiona tu perfil.
