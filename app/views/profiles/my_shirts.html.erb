@@ -1,16 +1,34 @@
-<div class="fondo-mi-perfil">
-  <%= render 'pestanas' %>
-    <div class="contenedor-my-shirt">
-      <h1 class="titulo">MIS CAMISETAS</h1>
-      <div class="scroll">
-        <% @shirts.each do |shirt| %>
-          <div class="imagen">
-            <%= show_photo_shirt(shirt) %>
-            <%= link_to shirt_path(shirt.id), class: "blur-button" do %>
-                Ver
-            <% end %>
-          </div>
-        <% end %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "reset", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/show_edit_profile", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/navbar_profile", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "styles/my_shirts", "data-turbo-track": "reload" %>
+
+</head>
+<body>
+  <div class="profile__background">
+    <%= render 'pestanas' %>
+      <div class="container__data">
+        <h1 class="data__title">MIS CAMISETAS</h1>
+        <div class="image__container">
+          <% @shirts.each do |shirt| %>
+            <div class="image__details">
+              <%= show_photo_shirt(shirt) %>
+              <%= link_to shirt_path(shirt.id), class: "details__blur-button" do %>
+                  Ver
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-</div>
+  </div>
+</body>
+</html>
+

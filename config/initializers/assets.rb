@@ -20,5 +20,6 @@ Rails.application.config.assets.precompile += %w( styles/show_edit_profile.css )
 Rails.application.config.assets.precompile += %w( styles/navbar_profile.css )
 Rails.application.config.assets.precompile += %w( styles/shirts.css )
 Rails.application.config.assets.precompile += %w( styles/shirt_card.css )
+Rails.application.config.assets.precompile += %w( styles/my_shirts.css )
 
 
